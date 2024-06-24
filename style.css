@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Popping', san-serif;
+    box-sizing: border-box;
+}
+
+.hero{
+    width: 100%;                            /* Element fills the full width of its container */
+    min-height: 100vh;                      /* Element's height is at least the full height of the viewport */
+    background: linear-gradient(45deg, #000000, #0047AB);   /* Gradient background from color one to color two */
+    color: #fff;                          /* Text color set to white */
+    position: relative;                     /* Element is positioned relative to its normal position */
+}
+.container {
+    width: 800px;                           /* Sets the width of the container to 800 pixels */
+    height: 180px;                          /* Sets the height of the container to 180 pixels */
+    position: absolute;                     /* Positions the container absolutely within its closest positioned ancestor */
+    top: 50%;                               /* Moves the top edge of the container to the 50% point of the container's containing block */
+    left: 50%;                              /* Moves the left edge of the container to the 50% point of the container's containing block */
+    transform: translate(-50%, -50%);       /* Shifts the container left by 50% of its width and up by 50% of its height, centering it */
+}
+
+.clock {
+    width: 100%;                            /* Sets the clock's width to 100% of its container's width */
+    height: 100%;                           /* Sets the clock's height to 100% of its container's height */
+    background: rgba(235, 0, 255, 0.11);  /* Sets a semi-transparent purple background color */
+    border-radius: 10px;                    /* Rounds the corners of the clock by 10 pixels */
+    display: flex;                          /* Uses flexbox layout for the clock's children */
+    align-items: center;                    /* Vertically centers the clock's children */
+    justify-content: center;                /* Horizontally centers the clock's children */
+    backdrop-filter: blur(40px);            /* Applies a blur effect to the area behind the clock */
+}
+
+.container::before {
+    content: '';                            /* Inserts an empty content before the container */
+    width: 180px;                           /* Sets the width of the pseudo-element to 180 pixels */
+    height: 180px;                          /* Sets the height of the pseudo-element to 180 pixels */
+    background: #ff006a;                  /* Sets a pink background color */
+    border-radius: 5px;                     /* Rounds the corners of the pseudo-element by 5 pixels */
+    position: absolute;                     /* Positions the pseudo-element absolutely within the container */
+    top: -50px;                             /* Moves the pseudo-element 50 pixels above the top edge of the container */
+    left: -50px;                            /* Moves the pseudo-element 50 pixels to the left of the left edge of the container */
+    z-index: -1;                            /* Places the pseudo-element behind other content in the container */
+}
+
+.container::after {
+    content: '';                            /* Inserts an empty content after the container */
+    width: 180px;                           /* Sets the width of the pseudo-element to 180 pixels */
+    height: 180px;                          /* Sets the height of the pseudo-element to 180 pixels */
+    background: #0077ff;                  /* Sets a blue background color */
+    border-radius: 50%;                     /* Makes the pseudo-element circular */
+    position: absolute;                     /* Positions the pseudo-element absolutely within the container */
+    bottom: -50px;                          /* Moves the pseudo-element 50 pixels below the bottom edge of the container */
+    right: -30px;                           /* Moves the pseudo-element 30 pixels to the right of the right edge of the container */
+    z-index: -1;                            /* Places the pseudo-element behind other content in the container */
+}
+
+.clock span {
+    font-size: 80px;                        /* Sets the font size of the span elements inside the clock to 80 pixels */
+    width: 110px;                           /* Sets the width of the span elements to 110 pixels */
+    display: inline-block;                  /* Displays the span elements as inline blocks */
+    text-align: center;                     /* Centers the text horizontally inside the span elements */
+    position: relative;                     /* Positions the span elements relative to their normal position */
+}
+
+/* Adds a pseudo-element after every <span> element inside elements with class .clock */
+.clock span::after {
+    font-size: 16px;             /* Sets the font size of the content */
+    position: absolute;          /* Positions the pseudo-element absolutely */
+    bottom: -15px;               /* Positions the pseudo-element 15px above the bottom of the parent element */
+    left: 50%;                   /* Aligns the pseudo-element horizontally in the center of the parent element */
+    transform: translateX(-50%); /* Translates the pseudo-element 50% of its own width to the left, centering it */
+}
+
+/* Adds content 'HOURS' after the element with id 'hrs' */
+#hrs::after {
+    content: 'HOURS';            /* Adds 'HOURS' as content after the element */
+}
+
+/* Adds content 'MINS' after the element with id 'min' */
+#min::after {
+    content: 'MINS';             /* Adds 'MINS' as content after the element */
+}
+
+/* Adds content 'SEC' after the element with id 'sec' */
+#sec::after {
+    content: 'SEC';              /* Adds 'SEC' as content after the element */
+}
+
+
+
+=======
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Popping', san-serif;
+    box-sizing: border-box;
+}
+
+.hero{
+    width: 100%;                            /* Element fills the full width of its container */
+    min-height: 100vh;                      /* Element's height is at least the full height of the viewport */
+    background: linear-gradient(45deg, #000000, #0047AB);   /* Gradient background from color one to color two */
+    color: #fff;                          /* Text color set to white */
+    position: relative;                     /* Element is positioned relative to its normal position */
+}
+.container {
+    width: 800px;                           /* Sets the width of the container to 800 pixels */
+    height: 180px;                          /* Sets the height of the container to 180 pixels */
+    position: absolute;                     /* Positions the container absolutely within its closest positioned ancestor */
+    top: 50%;                               /* Moves the top edge of the container to the 50% point of the container's containing block */
+    left: 50%;                              /* Moves the left edge of the container to the 50% point of the container's containing block */
+    transform: translate(-50%, -50%);       /* Shifts the container left by 50% of its width and up by 50% of its height, centering it */
+}
+
+.clock {
+    width: 100%;                            /* Sets the clock's width to 100% of its container's width */
+    height: 100%;                           /* Sets the clock's height to 100% of its container's height */
+    background: rgba(235, 0, 255, 0.11);  /* Sets a semi-transparent purple background color */
+    border-radius: 10px;                    /* Rounds the corners of the clock by 10 pixels */
+    display: flex;                          /* Uses flexbox layout for the clock's children */
+    align-items: center;                    /* Vertically centers the clock's children */
+    justify-content: center;                /* Horizontally centers the clock's children */
+    backdrop-filter: blur(40px);            /* Applies a blur effect to the area behind the clock */
+}
+
+.container::before {
+    content: '';                            /* Inserts an empty content before the container */
+    width: 180px;                           /* Sets the width of the pseudo-element to 180 pixels */
+    height: 180px;                          /* Sets the height of the pseudo-element to 180 pixels */
+    background: #ff006a;                  /* Sets a pink background color */
+    border-radius: 5px;                     /* Rounds the corners of the pseudo-element by 5 pixels */
+    position: absolute;                     /* Positions the pseudo-element absolutely within the container */
+    top: -50px;                             /* Moves the pseudo-element 50 pixels above the top edge of the container */
+    left: -50px;                            /* Moves the pseudo-element 50 pixels to the left of the left edge of the container */
+    z-index: -1;                            /* Places the pseudo-element behind other content in the container */
+}
+
+.container::after {
+    content: '';                            /* Inserts an empty content after the container */
+    width: 180px;                           /* Sets the width of the pseudo-element to 180 pixels */
+    height: 180px;                          /* Sets the height of the pseudo-element to 180 pixels */
+    background: #0077ff;                  /* Sets a blue background color */
+    border-radius: 50%;                     /* Makes the pseudo-element circular */
+    position: absolute;                     /* Positions the pseudo-element absolutely within the container */
+    bottom: -50px;                          /* Moves the pseudo-element 50 pixels below the bottom edge of the container */
+    right: -30px;                           /* Moves the pseudo-element 30 pixels to the right of the right edge of the container */
+    z-index: -1;                            /* Places the pseudo-element behind other content in the container */
+}
+
+.clock span {
+    font-size: 80px;                        /* Sets the font size of the span elements inside the clock to 80 pixels */
+    width: 110px;                           /* Sets the width of the span elements to 110 pixels */
+    display: inline-block;                  /* Displays the span elements as inline blocks */
+    text-align: center;                     /* Centers the text horizontally inside the span elements */
+    position: relative;                     /* Positions the span elements relative to their normal position */
+}
+
+/* Adds a pseudo-element after every <span> element inside elements with class .clock */
+.clock span::after {
+    font-size: 16px;             /* Sets the font size of the content */
+    position: absolute;          /* Positions the pseudo-element absolutely */
+    bottom: -15px;               /* Positions the pseudo-element 15px above the bottom of the parent element */
+    left: 50%;                   /* Aligns the pseudo-element horizontally in the center of the parent element */
+    transform: translateX(-50%); /* Translates the pseudo-element 50% of its own width to the left, centering it */
+}
+
+/* Adds content 'HOURS' after the element with id 'hrs' */
+#hrs::after {
+    content: 'HOURS';            /* Adds 'HOURS' as content after the element */
+}
+
+/* Adds content 'MINS' after the element with id 'min' */
+#min::after {
+    content: 'MINS';             /* Adds 'MINS' as content after the element */
+}
+
+/* Adds content 'SEC' after the element with id 'sec' */
+#sec::after {
+    content: 'SEC';              /* Adds 'SEC' as content after the element */
+}
+
+
+
+>>>>>>> 0d842fb (First Commit)

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Digital Clock Using JavaScript</title>
+        <link rel="stylesheet" href="style.css">  <!-- Links an external CSS file -->
+    </head>
+    <body>
+    <div class="hero">
+        <div class="container">
+            <div class="clock">
+                <span id="hrs">00</span>  <!-- Displays hours -->
+                <span>:</span>           <!-- Colon separator -->
+                <span id="min">00</span>  <!-- Displays minutes -->
+                <span>:</span>           <!-- Colon separator -->
+                <span id="sec">00</span>  <!-- Displays seconds -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript to update clock every second
+        let hrs = document.getElementById("hrs");  // Retrieves element with ID 'hrs'
+        let min = document.getElementById("min");  // Retrieves element with ID 'min'
+        let sec = document.getElementById("sec");  // Retrieves element with ID 'sec'
+
+        setInterval(() => {  // Executes the function repeatedly at a specified interval (1000ms = 1 second)
+            let currentTime = new Date();  // Creates a new Date object to get current date and time
+
+            // Updates the innerHTML of each element to display current time with leading zeros if needed
+            hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+            min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+            sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+        }, 1000);  // Interval set to 1000ms (1 second)
+    </script>
+    </body>
+</html>
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Digital Clock Using JavaScript</title>
+        <link rel="stylesheet" href="style.css">  <!-- Links an external CSS file -->
+    </head>
+    <body>
+    <div class="hero">
+        <div class="container">
+            <div class="clock">
+                <span id="hrs">00</span>  <!-- Displays hours -->
+                <span>:</span>           <!-- Colon separator -->
+                <span id="min">00</span>  <!-- Displays minutes -->
+                <span>:</span>           <!-- Colon separator -->
+                <span id="sec">00</span>  <!-- Displays seconds -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript to update clock every second
+        let hrs = document.getElementById("hrs");  // Retrieves element with ID 'hrs'
+        let min = document.getElementById("min");  // Retrieves element with ID 'min'
+        let sec = document.getElementById("sec");  // Retrieves element with ID 'sec'
+
+        setInterval(() => {  // Executes the function repeatedly at a specified interval (1000ms = 1 second)
+            let currentTime = new Date();  // Creates a new Date object to get current date and time
+
+            // Updates the innerHTML of each element to display current time with leading zeros if needed
+            hrs.innerHTML = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+            min.innerHTML = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+            sec.innerHTML = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+        }, 1000);  // Interval set to 1000ms (1 second)
+    </script>
+    </body>
+</html>
+>>>>>>> 0d842fb (First Commit)
